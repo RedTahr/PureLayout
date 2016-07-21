@@ -60,33 +60,35 @@ PL__ASSUME_NONNULL_BEGIN
 #pragma mark Array of Views
 
 /** Aligns views in this array to one another along a given edge. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoAlignViewsToEdge:(ALEdge)edge;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoAlignViewsToEdge:(ALEdge)edge PL__SWIFT_NAME(autoAlignViews(to:));
 
 /** Aligns views in this array to one another along a given axis. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoAlignViewsToAxis:(ALAxis)axis;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoAlignViewsToAxis:(ALAxis)axis PL__SWIFT_NAME(autoAlignViews(to:));
 
 /** Matches a given dimension of all the views in this array. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoMatchViewsDimension:(ALDimension)dimension;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoMatchViewsDimension:(ALDimension)dimension PL__SWIFT_NAME(autoMatchViews(dimension:));
 
 /** Sets the given dimension of all the views in this array to a given size. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoSetViewsDimension:(ALDimension)dimension toSize:(CGFloat)size;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoSetViewsDimension:(ALDimension)dimension toSize:(CGFloat)size PL__SWIFT_NAME(autoSetViews(dimension:to:));
 
 /** Sets all of the views in this array to a given size. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoSetViewsDimensionsToSize:(CGSize)size;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoSetViewsDimensionsToSize:(CGSize)size PL__SWIFT_NAME(autoSetViewsDimensions(to:));
 
 
 /** Distributes the views in this array equally along the selected axis in their superview.
     Views will be the same size (variable) in the dimension along the axis and will have spacing (fixed) between them. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoDistributeViewsAlongAxis:(ALAxis)axis
                                                         alignedTo:(ALAttribute)alignment
-                                                 withFixedSpacing:(CGFloat)spacing;
+                                                 withFixedSpacing:(CGFloat)spacing
+    PL__SWIFT_NAME(autoDistributeViews(along:alignedTo:fixedSpacing:));
 
 /** Distributes the views in this array equally along the selected axis in their superview.
     Views will be the same size (variable) in the dimension along the axis and will have spacing (fixed) between them, with optional insets from the first and last views to their superview. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoDistributeViewsAlongAxis:(ALAxis)axis
                                                         alignedTo:(ALAttribute)alignment
                                                  withFixedSpacing:(CGFloat)spacing
-                                                     insetSpacing:(BOOL)shouldSpaceInsets;
+                                                     insetSpacing:(BOOL)shouldSpaceInsets
+    PL__SWIFT_NAME(autoDistributeViews(along:alignedTo:fixedSpacing:insetSpacing:));
 
 /** Distributes the views in this array equally along the selected axis in their superview.
     Views will have spacing (fixed) between them, with optional insets from the first and last views to their superview, and optionally constrained to the same size in the dimension along the axis. */
@@ -94,21 +96,24 @@ PL__ASSUME_NONNULL_BEGIN
                                                         alignedTo:(ALAttribute)alignment
                                                  withFixedSpacing:(CGFloat)spacing
                                                      insetSpacing:(BOOL)shouldSpaceInsets
-                                                     matchedSizes:(BOOL)shouldMatchSizes;
+                                                     matchedSizes:(BOOL)shouldMatchSizes
+    PL__SWIFT_NAME(autoDistributeViews(along:alignedTo:fixedSpacing:insetSpacing:matchedSizes:));
 
 
 /** Distributes the views in this array equally along the selected axis in their superview.
     Views will be the same size (fixed) in the dimension along the axis and will have spacing (variable) between them. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoDistributeViewsAlongAxis:(ALAxis)axis
                                                         alignedTo:(ALAttribute)alignment
-                                                    withFixedSize:(CGFloat)size;
+                                                    withFixedSize:(CGFloat)size
+    PL__SWIFT_NAME(autoDistributeViews(along:alignedTo:fixedSize:));
 
 /** Distributes the views in this array equally along the selected axis in their superview.
     Views will be the same size (fixed) in the dimension along the axis and will have spacing (variable) between them, with optional insets from the first and last views to their superview. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoDistributeViewsAlongAxis:(ALAxis)axis
                                                         alignedTo:(ALAttribute)alignment
                                                     withFixedSize:(CGFloat)size
-                                                     insetSpacing:(BOOL)shouldSpaceInsets;
+                                                     insetSpacing:(BOOL)shouldSpaceInsets
+    PL__SWIFT_NAME(autoDistributeViews(along:alignedTo:fixedSize:insetSpacing:));
 
 @end
 
