@@ -84,6 +84,9 @@ PL__ASSUME_NONNULL_BEGIN
 /** Pins the edges of the view to the edges of its superview. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdges;
 
+/** Pins 3 of the 4 edges of the view to the edges of its superview, excluding one edge. */
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdgesExcludingEdge:(ALEdge)edge;
+
 /** Pins the edges of the view to the edges of its superview with the given edge insets. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdgesWithInsets:(ALEdgeInsets)insets;
 
