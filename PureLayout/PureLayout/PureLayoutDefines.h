@@ -48,6 +48,13 @@
 #   define PL__ASSUME_NONNULL_END
 #endif
 
+// Define a preprocesssor macros that allows the Swift 3 API design guidelines to be adopted in a backwards-compatible manner.
+#ifdef NS_SWIFT_NAME
+#   define PL__SWIFT_NAME(...) NS_SWIFT_NAME(__VA_ARGS__)
+#else
+#   define PL__SWIFT_NAME(...)
+#endif
+
 // Define some preprocessor macros that allow generics to be adopted in a backwards-compatible manner.
 #if __has_feature(objc_generics)
 #   define PL__GENERICS(class, ...)         class<__VA_ARGS__>
