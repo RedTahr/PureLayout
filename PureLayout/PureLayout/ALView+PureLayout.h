@@ -73,39 +73,39 @@ PL__ASSUME_NONNULL_BEGIN
 #pragma mark Pin Edges to Superview
 
 /** Pins the given edge of the view to the same edge of its superview. */
-- (NSLayoutConstraint *)autoPinEdgeToSuperviewEdge:(ALEdge)edge;
+- (NSLayoutConstraint *)autoPinEdgeToSuperviewEdge:(ALEdge)edge PL__SWIFT_NAME(autoPinEdgeToSuperview(edge:));
 
 /** Pins the given edge of the view to the same edge of its superview with an inset. */
-- (NSLayoutConstraint *)autoPinEdgeToSuperviewEdge:(ALEdge)edge withInset:(CGFloat)inset;
+- (NSLayoutConstraint *)autoPinEdgeToSuperviewEdge:(ALEdge)edge withInset:(CGFloat)inset PL__SWIFT_NAME(autoPinEdgeToSuperview(edge:inset:));
 
 /** Pins the given edge of the view to the same edge of its superview with an inset as a maximum or minimum. */
-- (NSLayoutConstraint *)autoPinEdgeToSuperviewEdge:(ALEdge)edge withInset:(CGFloat)inset relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoPinEdgeToSuperviewEdge:(ALEdge)edge withInset:(CGFloat)inset relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoPinEdgeToSuperview(edge:inset:relation:));
 
 /** Pins the edges of the view to the edges of its superview. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdges;
 
 /** Pins 3 of the 4 edges of the view to the edges of its superview, excluding one edge. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdgesExcludingEdge:(ALEdge)edge;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdgesExcludingEdge:(ALEdge)edge PL__SWIFT_NAME(autoPinEdgesToSuperviewEdges(excluding:));
 
 /** Pins the edges of the view to the edges of its superview with the given edge insets. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdgesWithInsets:(ALEdgeInsets)insets;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdgesWithInsets:(ALEdgeInsets)insets PL__SWIFT_NAME(autoPinEdgesToSuperviewEdges(insets:));
 
 /** Pins 3 of the 4 edges of the view to the edges of its superview with the given edge insets, excluding one edge. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdgesWithInsets:(ALEdgeInsets)insets excludingEdge:(ALEdge)edge;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewEdgesWithInsets:(ALEdgeInsets)insets excludingEdge:(ALEdge)edge PL__SWIFT_NAME(autoPinEdgesToSuperviewEdges(insets:excluding:));
 
 #if PL__PureLayout_MinBaseSDK_iOS_8_0
 
 /** Pins the given edge of the view to the corresponding margin of its superview. Available in iOS 8.0 and later. */
-- (NSLayoutConstraint *)autoPinEdgeToSuperviewMargin:(ALEdge)edge;
+- (NSLayoutConstraint *)autoPinEdgeToSuperviewMargin:(ALEdge)edge PL__SWIFT_NAME(autoPinEdgeToSuperview(marginEdge:));
 
 /** Pins the given edge of the view to the corresponding margin of its superview as a maximum or minimum. Available in iOS 8.0 and later. */
-- (NSLayoutConstraint *)autoPinEdgeToSuperviewMargin:(ALEdge)edge relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoPinEdgeToSuperviewMargin:(ALEdge)edge relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoPinEdgeToSuperview(marginEdge:relation:));
 
 /** Pins the edges of the view to the margins of its superview. Available in iOS 8.0 and later. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewMargins;
 
 /** Pins 3 of the 4 edges of the view to the margins of its superview excluding one edge. Available in iOS 8.0 and later. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewMarginsExcludingEdge:(ALEdge)edge;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoPinEdgesToSuperviewMarginsExcludingEdge:(ALEdge)edge PL__SWIFT_NAME(autoPinEdgesToSuperviewMarginsExcluding(edge:));
 
 #endif /* PL__PureLayout_MinBaseSDK_iOS_8_0 */
 
@@ -113,55 +113,55 @@ PL__ASSUME_NONNULL_BEGIN
 #pragma mark Pin Edges
 
 /** Pins an edge of the view to a given edge of another view. */
-- (NSLayoutConstraint *)autoPinEdge:(ALEdge)edge toEdge:(ALEdge)toEdge ofView:(ALView *)otherView;
+- (NSLayoutConstraint *)autoPinEdge:(ALEdge)edge toEdge:(ALEdge)toEdge ofView:(ALView *)otherView PL__SWIFT_NAME(autoPin(edge:to:of:));
 
 /** Pins an edge of the view to a given edge of another view with an offset. */
-- (NSLayoutConstraint *)autoPinEdge:(ALEdge)edge toEdge:(ALEdge)toEdge ofView:(ALView *)otherView withOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)autoPinEdge:(ALEdge)edge toEdge:(ALEdge)toEdge ofView:(ALView *)otherView withOffset:(CGFloat)offset PL__SWIFT_NAME(autoPin(edge:to:of:offset:));
 
 /** Pins an edge of the view to a given edge of another view with an offset as a maximum or minimum. */
-- (NSLayoutConstraint *)autoPinEdge:(ALEdge)edge toEdge:(ALEdge)toEdge ofView:(ALView *)otherView withOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoPinEdge:(ALEdge)edge toEdge:(ALEdge)toEdge ofView:(ALView *)otherView withOffset:(CGFloat)offset relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoPin(edge:to:of:offset:relation:));
 
 
 #pragma mark Align Axes
 
 /** Aligns an axis of the view to the same axis of another view. */
-- (NSLayoutConstraint *)autoAlignAxis:(ALAxis)axis toSameAxisOfView:(ALView *)otherView;
+- (NSLayoutConstraint *)autoAlignAxis:(ALAxis)axis toSameAxisOfView:(ALView *)otherView PL__SWIFT_NAME(autoAlign(axis:toSameAxisOf:));
 
 /** Aligns an axis of the view to the same axis of another view with an offset. */
-- (NSLayoutConstraint *)autoAlignAxis:(ALAxis)axis toSameAxisOfView:(ALView *)otherView withOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)autoAlignAxis:(ALAxis)axis toSameAxisOfView:(ALView *)otherView withOffset:(CGFloat)offset PL__SWIFT_NAME(autoAlign(axis:toSameAxisOf:offset:));
 
 /** Aligns an axis of the view to the same axis of another view with a multiplier. */
-- (NSLayoutConstraint *)autoAlignAxis:(ALAxis)axis toSameAxisOfView:(ALView *)otherView withMultiplier:(CGFloat)multiplier;
+- (NSLayoutConstraint *)autoAlignAxis:(ALAxis)axis toSameAxisOfView:(ALView *)otherView withMultiplier:(CGFloat)multiplier PL__SWIFT_NAME(autoAlign(axis:toSameAxisOf:multiplier:));
 
 
 #pragma mark Match Dimensions
 
 /** Matches a dimension of the view to a given dimension of another view. */
-- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView;
+- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView PL__SWIFT_NAME(autoMatch(dimension:to:of:));
 
 /** Matches a dimension of the view to a given dimension of another view with an offset. */
-- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView withOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView withOffset:(CGFloat)offset PL__SWIFT_NAME(autoMatch(dimension:to:of:offset:));
 
 /** Matches a dimension of the view to a given dimension of another view with an offset as a maximum or minimum. */
-- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView withOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView withOffset:(CGFloat)offset relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoMatch(dimension:to:of:offset:relation:));
 
 /** Matches a dimension of the view to a multiple of a given dimension of another view. */
-- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView withMultiplier:(CGFloat)multiplier;
+- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView withMultiplier:(CGFloat)multiplier PL__SWIFT_NAME(autoMatch(dimension:to:of:multiplier:));
 
 /** Matches a dimension of the view to a multiple of a given dimension of another view as a maximum or minimum. */
-- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView withMultiplier:(CGFloat)multiplier relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(ALView *)otherView withMultiplier:(CGFloat)multiplier relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoMatch(dimension:to:of:multiplier:relation:));
 
 
 #pragma mark Set Dimensions
 
 /** Sets the view to a specific size. */
-- (PL__NSArray_of(NSLayoutConstraint *) *)autoSetDimensionsToSize:(CGSize)size;
+- (PL__NSArray_of(NSLayoutConstraint *) *)autoSetDimensionsToSize:(CGSize)size PL__SWIFT_NAME(autoSetDimensions(to:));
 
 /** Sets the given dimension of the view to a specific size. */
-- (NSLayoutConstraint *)autoSetDimension:(ALDimension)dimension toSize:(CGFloat)size;
+- (NSLayoutConstraint *)autoSetDimension:(ALDimension)dimension toSize:(CGFloat)size PL__SWIFT_NAME(autoSet(dimension:to:));
 
 /** Sets the given dimension of the view to a specific size as a maximum or minimum. */
-- (NSLayoutConstraint *)autoSetDimension:(ALDimension)dimension toSize:(CGFloat)size relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoSetDimension:(ALDimension)dimension toSize:(CGFloat)size relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoSet(dimension:to:relation:));
 
 
 #pragma mark Set Content Compression Resistance & Hugging
@@ -178,19 +178,19 @@ PL__ASSUME_NONNULL_BEGIN
 #pragma mark Constrain Any Attributes
 
 /** Constrains an attribute of the view to a given attribute of another view. */
-- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView;
+- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView PL__SWIFT_NAME(autoConstrain(attribute:to:of:));
 
 /** Constrains an attribute of the view to a given attribute of another view with an offset. */
-- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView withOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView withOffset:(CGFloat)offset PL__SWIFT_NAME(autoConstrain(attribute:to:of:offset:));
 
 /** Constrains an attribute of the view to a given attribute of another view with an offset as a maximum or minimum. */
-- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView withOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView withOffset:(CGFloat)offset relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoConstrain(attribute:to:of:offset:relation:));
 
 /** Constrains an attribute of the view to a given attribute of another view with a multiplier. */
-- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView withMultiplier:(CGFloat)multiplier;
+- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView withMultiplier:(CGFloat)multiplier PL__SWIFT_NAME(autoConstrain(attribute:to:of:multiplier:));
 
 /** Constrains an attribute of the view to a given attribute of another view with a multiplier as a maximum or minimum. */
-- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView withMultiplier:(CGFloat)multiplier relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoConstrainAttribute:(ALAttribute)attribute toAttribute:(ALAttribute)toAttribute ofView:(ALView *)otherView withMultiplier:(CGFloat)multiplier relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoConstrain(attribute:to:of:multipler:relation:));
 
 
 #pragma mark Pin to Layout Guides (iOS only)
@@ -198,16 +198,16 @@ PL__ASSUME_NONNULL_BEGIN
 #if TARGET_OS_IPHONE
 
 /** Pins the top edge of the view to the top layout guide of the given view controller with an inset. Available on iOS only. */
-- (NSLayoutConstraint *)autoPinToTopLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset;
+- (NSLayoutConstraint *)autoPinToTopLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset PL__SWIFT_NAME(autoPinToTopLayoutGuide(of:inset:));
 
 /** Pins the top edge of the view to the top layout guide of the given view controller with an inset as a maximum or minimum. Available on iOS only. */
-- (NSLayoutConstraint *)autoPinToTopLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoPinToTopLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoPinToTopLayoutGuide(of:inset:relation:));
 
 /** Pins the bottom edge of the view to the bottom layout guide of the given view controller with an inset. Available on iOS only. */
-- (NSLayoutConstraint *)autoPinToBottomLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset;
+- (NSLayoutConstraint *)autoPinToBottomLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset PL__SWIFT_NAME(autoPinToBottomLayoutGuide(of:inset:));
 
 /** Pins the bottom edge of the view to the bottom layout guide of the given view controller with an inset as a maximum or minimum. Available on iOS only. */
-- (NSLayoutConstraint *)autoPinToBottomLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset relation:(NSLayoutRelation)relation;
+- (NSLayoutConstraint *)autoPinToBottomLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset relation:(NSLayoutRelation)relation PL__SWIFT_NAME(autoPinToBottomLayoutGuide(of:inset:relation:));
 
 #endif /* TARGET_OS_IPHONE */
 
