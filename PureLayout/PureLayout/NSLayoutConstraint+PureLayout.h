@@ -54,7 +54,8 @@ PL__ASSUME_NONNULL_BEGIN
 
 /** Sets the constraint priority to the given value for all constraints created using the PureLayout API within the given constraints block.
     NOTE: This method will have no effect (and will NOT set the priority) on constraints created or added without using the PureLayout API! */
-+ (void)autoSetPriority:(ALLayoutPriority)priority forConstraints:(__attribute__((noescape)) ALConstraintsBlock)block;
++ (void)autoSetPriority:(ALLayoutPriority)priority forConstraints:(__attribute__((noescape)) ALConstraintsBlock)block
+    PL__SWIFT_NAME(autoSet(priority:forConstraints:));
 
 
 #pragma mark Identify Constraints
@@ -63,7 +64,8 @@ PL__ASSUME_NONNULL_BEGIN
 
 /** Sets the identifier for all constraints created using the PureLayout API within the given constraints block.
     NOTE: This method will have no effect (and will NOT set the identifier) on constraints created or added without using the PureLayout API! */
-+ (void)autoSetIdentifier:(NSString *)identifier forConstraints:(__attribute__((noescape)) ALConstraintsBlock)block;
++ (void)autoSetIdentifier:(NSString *)identifier forConstraints:(__attribute__((noescape)) ALConstraintsBlock)block
+    PL__SWIFT_NAME(autoSet(identifier:forConstraints:));
 
 /** Sets the string as the identifier for this constraint. Available in iOS 7.0 and OS X 10.9 and later. */
 - (instancetype)autoIdentify:(NSString *)identifier;
